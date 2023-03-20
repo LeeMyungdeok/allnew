@@ -1,4 +1,10 @@
 # .gitignore
+
+## c programing
 c/**/a.out
 c/**/hello
 c/**/*.o
+
+## java
+
+java/*.class
