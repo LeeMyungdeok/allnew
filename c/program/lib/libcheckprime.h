@@ -1,0 +1,1 @@
+int checkeprime (int);
