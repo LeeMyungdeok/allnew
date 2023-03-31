@@ -6,5 +6,11 @@ c/**/hello
 c/**/*.o
 
 ## java
-
 java/*.class
+
+##scala
+scala/**/project
+scala/**/target
+
+##maven
+maven/target
