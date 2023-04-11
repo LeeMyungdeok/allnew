@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>User Authentication</title>
+    </head>
+
+    <body>
+    <h3>User Authentication</h3>
+    <hr />
+        <form action = "/insert" target= "targetURL" name = "userForm" method="post">
+            <p>Userid : <input type="text" size = "15" name = "UserID" /> <br /></p>
+            <p>Name : <input type="text" size="15" name="Name" /> <br /></p>
+            <p>Email : <input type="text" size="15" name="Email" /> <br /></p>
+            <p>Mobile : <input type="text" size="15" name="Mobile" /> <br /></p>
+            <input type="button" value="get select" onclick='document.targetURL.location.href="/select"' />&nbsp;&nbsp;
+            <input type="button" value="get selectQuery"
+                onclick='document.targetURL.location.href="/selectQuery?UserID=" + document.userForm.UserID.value' />&nbsp;&nbsp;
+            <input type="submit" value="post insert" onclick='document.targetURL.location.href="/insert"' />&nbsp;&nbsp;
+            <button type="submit" formaction="/update">post update</button>&nbsp;&nbsp;
+            <button type="submit" formaction="/delete">post delete</button>&nbsp;&nbsp;
+        </form>
+        <hr />
+        <iframe name = "targetURL" width="70%" height="500" style="border:none";
+        src = "/select"></iframe>&nbsp;&nbsp;
+        
+    </body>
+</html>

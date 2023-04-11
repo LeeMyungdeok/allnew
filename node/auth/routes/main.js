@@ -34,15 +34,16 @@ app.post("/select", (req, res) => {
 });
 
 app.get("/selectQuery", (req, res) => {
-  const userid = req.query.userid;
-  const result = connection.query("select * from user where userid=?" , [userid]);
-  console.log(result);
-  res.send(result);
+  const id = req.query.id;
+  console.log(id)
+  // const result = connection.query("select * from user where userid=?" , [id]);
+  // console.log(result);
+  // res.send(result);
 });
 
 app.post("/selectQuery", (req, res) => {
-  const userid = req.body.userid;
-  const result = connection.query("select * from user where userid=?" , [userid]);
+  const id = req.body.id;
+  const result = connection.query("select * from user where userid=?" , [id]);
   console.log(result);
   res.send(result);
 });
