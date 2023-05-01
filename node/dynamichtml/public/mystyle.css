@@ -1,0 +1,36 @@
+table {
+    border-collapse: collapse;
+}
+
+th {
+    text-align: center;
+    padding: 5px;
+    height: 15px;
+    width: 100px;
+}
+
+td {
+    text-align: left;
+    padding: 5px;
+    height: 15px;
+    width: 100px;
+}
+
+thead,
+tfoot {
+    background: rgb(255, 255, 255);
+    color: rgb(90, 247, 85);
+}
+
+tbody tr:nth-child(even) {
+    background: rgb(157, 252, 126);
+}
+
+tbody tr:hover {
+    background: rgb(150, 244, 177);
+}
+
+h3 {
+    color: rgb(36, 132, 7);
+    margin-left: 20px;
+}

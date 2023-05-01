@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>palindrome</title>
+    <script>
+        function findChecked() {
+            let Input = document.getElementById("userInput").value;   // 텍스트 출력    
+            let Language = document.getElementsByName("language");    // 타입 선언
+            let mycked = 0;
+            let num = 0;
+            let str = "";
+
+            for (let i = 0; i < Language.length ; i++) {                    // 문자 or 숫자 체크 유무 확인
+                if (Language[i].checked == true) {
+                    mycked = i + 1 ;
+                }
+            }
+
+            if (parseInt(Input) > 0) {                                      // text 숫자 문자 구별
+                num = parseInt(Input) 
+            } else { 
+                str = Input 
+            }
+            
+            if (str.length == 3  && mycked == 1) {                           // 펠린드롬인지 확인 유무      
+               if (str[0] == str[str.length-1]) { 
+                    alert("펠린드롬 입니다.")
+                }
+                else {
+                    alert("문자의 펠린드롬이 아닙니다.")
+                }
+
+            } else if (num > 0 && mycked == 2) {
+                if ( num % 10 == ((num % 1000) - (num % 100)) / 100) { 
+                    alert("펠린드롬 입니다.") 
+                }
+                else {
+                    alert("숫자의 펠린드롬이 아닙니다.")
+                }
+            } else  {
+                alert("text 와 type이 안맞습니다.")
+            }
+            
+        }
+    </script>
+</head>
+<body>
+
+    <h3>우영우</h3>
+    <form>
+        <input type="text" id="userInput">
+        <input type="radio" name="language" value="1">문자
+        <input type="radio" name="language" value="2">숫자
+        <input type="button" value="find checked" onclick="findChecked()">
+    </form>
+</body>
+
+</html>
+
+
+

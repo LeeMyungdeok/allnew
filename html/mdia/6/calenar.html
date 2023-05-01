@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>while 문</title>
+</head>
+
+<body>
+    <h3>Calendar</h3>
+    <hr>
+    <script>
+        var x = prompt("xxxx-xx 형식으로 작성");
+        var y = new Date(x).getDay();
+        var m = new Date(x).getMonth();
+        var firstDay = new Date(y, m, 1).getDay();
+        res = ["일", "월", "화", "수", "목", "금", "토"]
+        document.write("year: " + y +", month: " + m + "<br>")
+        document.write(firstDay+"<br>")
+        document.write(firstDay)
+        
+
+
+    </script>
+</body>
+
+</html>

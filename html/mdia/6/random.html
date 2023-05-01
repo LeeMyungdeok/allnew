@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>while 문</title>
+</head>
+<body>
+    <h3>Random tntwk 달력 출력</h3>
+    <hr>
+    <script>
+        let x = prompt("내가 내야하는거");
+        let y = Math.floor(Math.random() * (3-1) + 1);
+        res = ["x", "가위", "바위", "보"]
+        if (x == 0 || x > 3) {
+            document.write("돌아가")
+        }
+        if (x == y) {
+            document.write("비겼습니다. (유저: " + u + " 컴퓨터: " + m + ")")
+        } else if ((x == 1 && y == 3) || (x == 2 && y == 1) || (x == 3 && y== 2)) {
+            document.write("사용자가 컴퓨터를 이겼습니다.<br>" + "유저: " + res[x] + " 컴퓨터: " + res[y]  )
+        } else {
+            document.write("컴퓨터가 사용자를 이겼습니다.<br>" + "유저: " + res[x] + " 컴퓨터: " + res[y])
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>[]로 배열 만들기</title>
+</head>
+
+<body>
+    <h3>별찍기</h3>
+    <hr>
+    <script>
+        for (let i = 0; i < 5; i++) {              //1부터 4까지 돌아감
+                for (let j = 5; j > i; j) {      // 4부터 -로 2로끝남
+                    document.write('&nbsp');
+                }
+                for (let j = 0; j <= i; j--) {
+                    document.write('*');
+                }
+                for (let j = 1; j <= i; j++) {
+                    document.write('*');
+                }
+                document.write('<br>');
+            }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>while 문</title>
+</head>
+<body>
+<h3>while 문으로 달력 출력</h3>
+<hr>
+<script>
+	let n = prompt("0보다 큰 정수를 입력하세요", 0); 
+	days = parseInt(n); // 문자열을 숫자로 바꿈
+	let i=0
+	while(i<= days) { // i가 0에서 n까지 반복
+		i++
+		arr = "     "+ i ;
+		if (i % 7 == 0) {
+			arr += "<br>";
+		}
+		document.write(arr);
+	}
+
+	
+</script>
+</body>
+</html>
+

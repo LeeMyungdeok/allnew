@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>User Authentication</title>
-    </head>
-    <body>
-    <h3>User Authentication</h3>
-    <hr />
-        <form action = "/insert" target= "gargetURL" name = "userForm" method="post">
-            <p>Userid : <input type="text" size = "15" name = "id" /> <br /></p>
-            <p></p>Password : <input type="password" size="15" name="pw" /> <br /></p>
-            <input type ="button" value="get select" onclick='document.targetURL.location.href="/select"' />&nbsp;&nbsp;
-            <input type="button" value="get selectQuery" onclick='document.targetURL.location.href="/selectQuery?id=" + document.userForm.id.value' />&nbsp;&nbsp;
-            <input type ="submit" value = "post insert" onclik=  />&nbsp;&nbsp;
-            <button type = "submit" formaction="/update">post update</button>&nbsp;&nbsp;
-            <button type = "submit" formaction="/delete">post delete</button>&nbsp;&nbsp;
-        </form>
-        <hr />
-        <iframe name = "targetURL" width="70%" height="500" style="border:none";
-        src = "/hello"></iframe>&nbsp;&nbsp;
-        
-    </body>
-</html>
+  <head>
+    <meta charset="utf-8" />
+    <title>서울시 공공자전거 로그인 화면</title>
+    <script>
+      function getParameter(name) {
+          name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+          return results === null
+            ? ""
+            : decodeURIComponent(results[1].replace(/\+/g, " "));    //????
+        }
+      function sessionlogout() {
+          let id = getParameter("id");
+          sessionStorage.removeItem(id)
+      }
+      function sessionStore() {
+          let id = getParameter("id");
+          let now = new Date();
+          if (!window.sessionStorage) {             //브라우저에 저장 한도가 초과할 경우와 쿠키 비활성화 상태일 경우
+            alert("세션 스토리지를 지원하지 않습니다.");
+            return;
+          }
+        }
+    </script>
+    <link href="mystyle.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <h3 style="text-align: left">
+      <img src="media/jj.png" width="35" height="20">&nbsp;통합 계정 로그인&nbsp;&nbsp;
+      <hr />
+    </h3>
+    <h2>
+      <img src="media/jj.png" width="100" height="100"><br />통합 로그인</h2>
+    <form action="/login" name="userForm" method="post">
+      <p>아이디&nbsp;&nbsp; : <input type="text" size="15" name="id" /></p>
+      <p>비밀번호&nbsp; : <input type="password" size="15" name="pw" /></p>
+      <input type="submit" value="로그인 >"/>
+      <input type="reset" value="취소 >" />
+      <a href="register.html">회원가입 ></a>
+    </form>
+    
+  </body>

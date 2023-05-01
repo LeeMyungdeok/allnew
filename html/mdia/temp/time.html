@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>출력</title>
+</head>
+
+<body>
+    <h3>랜덤</h3>
+    <hr>
+    <script>
+        var today = new Date();
+        var next = new Date(2023, 2, 5, 9, 00, 00);
+        let m_day = today - next
+        document.write(m_day.getFullYear() + "년도<br>");
+        document.write(m_day.getMonth() + 1 + "월<br>");
+        document.write(m_day.getDate() + "일<br>");
+        document.write(m_day.getHours() + "시<br>");
+        document.write(m_day.getMinutes() + "분<br>");
+        document.write(m_day.getSeconds() + "초<br>");
+        document.write(m_day.getMilliseconds());
+        
+
+    </script>
+</body>
+
+</html>

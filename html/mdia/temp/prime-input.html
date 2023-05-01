@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>1~10까지 더하는 워크 태스크 만들기</title>
+</head>
+<body>
+    <h3>소수 구하기</h3>
+    <hr>
+    <div>소수인가? <span id="sum"></span></div>
+    <input id="from" type="text" size="10">
+<button type="button" id="add" onclick="send()">출력</button>
+    <script>
+        let addWorker = new Worker("prime.js");
+        function send() { 
+            let parameters = {
+            from : document.getElementById("from").value
+            };
+            addWorker.postMessage(parameters)
+        }
+        addWorker.onmessage = function (e) { // e는 MessageEvent 객체
+            alert(e.data)
+        }
+    </script>
+</body>
+
+</html>

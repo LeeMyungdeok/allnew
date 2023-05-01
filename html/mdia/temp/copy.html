@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>palindrome</title>
+    <script>
+        function findChecked() {
+            let Input = document.getElementById("userInput").value;
+            let Language = document.getElementsByName("language");
+            let isNumber = (Language[1].checked);
+
+            if (isNumber) {
+                if (isPalindrome(Input)) {
+                    alert("This is Palindrome.");
+                } else {
+                    alert("This is not a palindrome of numbers.");
+                }
+            } else {
+                if (isPalindrome(Input)) {
+                    alert("This is Palindrome.");
+                } else {
+                    alert("This is not a palindrome of characters.");
+                }
+            }
+        }
+
+        function isPalindrome(str) {
+            str = str.toString(); // convert to string
+            for (let i = 0; i < str.length / 2; i++) {
+                if (str[i] !== str[str.length - 1 - i]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h3>Palindrome? Or Not?</h3>
+    <form method="POST">
+        <input type="text" id="userInput">
+        <input type="radio" name="language" value="1" checked>characters
+        <input type="radio" name="language" value="2">number

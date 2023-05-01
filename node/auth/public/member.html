@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>User Authentication</title>
+    <script>
+        function getParameter(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null
+                ? ""
+                : decodeURIComponent(results[1].replace(/\+/g, " "));    //????
+        }
+        function sessionStore() {
+            let id = getParameter("id");
+            let now = new Date();
+            if (!window.sessionStorage) {             //브라우저에 저장 한도가 초과할 경우와 쿠키 비활성화 상태일 경우
+                alert("세션 스토리지를 지원하지 않습니다.");
+                return;
+            }
+            if (id == "") {
+                alert("접근 방식이 잘못되었습니다.")
+                location.href = "index.html";
+                sessionStorage.removeItem("")
+            } else { 
+                alert(`사용자 ${id} 세션 스토리지 생성`);
+                sessionStorage.setItem(id, now) 
+             }
+            
+        } 
+        
+        function sessionlogout() {
+                if (confirm("로그아웃 할래요?")) {              // 삭제
+                    let id = getParameter("id");
+                    sessionStorage.removeItem(id)
+                }
+                return;
+            }
+    </script>
+    <link href="mystyle.css" type="text/css" rel="stylesheet">
+</head>
+
+<body onload= "sessionStore()">
+    <nav id="menubar">
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="user.html">AboutMe</a></li>
+            <li style="float:right;"><a  onclick = "sessionlogout()" href="index.html">logout</a></li>
+            <hr />
+        </ul>
+    </nav>
+    <h3>관리자<hr /></h3>
+    <form action="/insert" target="targetURL" name="userForm" method="post">
+        <p>Userid : <input type="text" size="15" name="id" /></p>
+        <p>Password : <input type="password" size="15" name="pw" /></p>
+        <input type="button" value="get select" onclick='document.targetURL.location.href="/select"' />&nbsp;&nbsp;
+        <input type="button" value="get selectQuery"
+            onclick='document.targetURL.location.href="/selectQuery?id="+document.userForm.id.value' />&nbsp;&nbsp;
+        <button type="submit" formaction="/update">post insert</button>&nbsp;&nbsp;
+        <button type="submit" formaction="/update">post update</button>&nbsp;&nbsp;
+        <button type="submit" formaction="/delete">post delete</button>
+    </form>
+    <hr />
+    <iframe name="targetURL" width="70%" height="500" style="border: none" src="/hello"></iframe>
+</body>
+</html>

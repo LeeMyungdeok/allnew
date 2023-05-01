@@ -1,0 +1,136 @@
+body {
+    text-align: center;
+    font: bold 19px monospace, sans-serif;
+    background-color: white;
+}x
+h3 {
+    color: rgb(115, 209, 243);
+    margin: 50px;
+}
+hr {
+    border: 1px solid rgb(3, 3, 3);
+}
+
+
+input[type="password"] {
+    border-style: solid;
+    font-family: muddled;
+    border-radius: 5px;
+    border-color: rgb(199, 233, 105);
+}
+
+input[type="text"] {
+    font-family: muddled;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(199, 233, 105);
+    
+}
+
+input[type="submit"] {
+    border-style: solid;
+    font-size: 12px;
+    font-family: Geogia;
+    color: black;
+    background-color: white;
+    border-color: white;
+
+}
+input[type="reset"] {
+    border-style: solid;
+    font-size: 12px;
+    font-family: Geogia;
+    color: black;
+    background-color: white;
+    border-color:white;
+
+}
+
+
+a {
+    font-size: 12px;
+    font-family: Geogia;
+    color: rgb(50, 114, 61);
+    border-style: solid;
+    border-color: white;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#reound {
+    border-image: url(“border.png”) 30 round;
+}
+#repeat {
+    border-image: url(“border.png”) 30 round;
+}
+#stretch {
+    border-image: url(“border.png”) 30 round;
+}
+div.box {
+    text-align: center;
+    background: white;
+    border-style: solid;
+    border-color:white;
+
+    width: 500px;
+    height: 50px;
+    border-color: rgb(178, 233, 178);
+
+    margin: 100px;
+    border-width: 1px;
+    padding: 20px;
+}
+div.box-inner {
+    border-style: none;
+    text-align: center;
+    border-color: rgb(245, 217, 189);
+
+    margin: 100px;
+    border-width: 1px;
+    margin: 10px;
+    padding: 10px;
+}
+
+p {
+    font-family: muddled;
+}
+
+
+
+#menubar {
+    background:white;
+    border-style: none;
+}
+
+#menubar ul {
+    /* 여백과 패딩 모두 0 */
+    margin: 0;
+    padding: 0;
+    width: 567px;
+    /* 모든 아이템(<li>)을 한 줄에 품을 수 있는 폭 */
+    
+}
+
+#menubar ul li {
+    display: inline-block;
+    /* 새 줄로 넘어가지 않게 */
+    list-style-type: none;
+    /* 마커 삭제 */
+    padding: 0px 15px;
+    /* top=bottom=0, left=right=15px */
+    
+}
+
+#menubar ul li a {
+    color: rgb(3, 1, 1);
+    text-decoration: none;
+    /* 링크 보이지 않게 */
+    
+}
+
+#menubar ul li a:hover {
+    color: rgb(48, 210, 126);
+    /* 마우스 올라 갈 때 색 */
+}
+
+
