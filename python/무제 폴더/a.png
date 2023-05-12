@@ -1,0 +1,47 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>네이버 웹툰</title>
+	<link rel="shortcut icon" href="https://ssl.pstatic.net/static/m/comic/im/favicon/1804/webtoon_favicon_32x32.ico" type="image/x-icon">
+
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta property="og:type" content="article">
+	<meta property="og:article:author" content="네이버 웹툰">
+	<meta property="og:article:author:url" content="https://comic.naver.com">
+	<meta property="og:title" content="뷰티풀 군바리">
+	<meta property="og:image" content="https://shared-comic.pstatic.net/thumb/webtoon/648419/thumbnail/thumbnail_IMAG21_d9398229-cbfd-47dc-9208-0a6fb936f3a7.jpg">
+	<meta property="og:url" content="http://comic.naver.com/webtoon/list?titleId=648419">
+	<meta property="og:description" content="&#039;여자도 군대에 간다면?&#039;본격 여자도 군대 가는 만화!">
+
+	<script>
+		if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+			window.location = 'microsoft-edge:' + window.location;
+			setTimeout(function () {
+				window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+			}, 1);
+		}
+	</script>
+	<script async src='https://ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js'></script>
+	<script>
+		var ccsrv = 'cc.naver.com';
+		window.gladsdk = window.gladsdk || { cmd: [] };
+	</script>
+
+</head>
+
+<body>
+<div id="root"></div>
+</body>
+<script type="text/javascript" src="/runtime-4a93260e84564ff4ecdb.js"></script>
+<script type="text/javascript" src="/vendor-react-d37d9c657a271200d9cf.js"></script>
+<script type="text/javascript" src="/vendor-react-common-9fc837dada41110dc1fd.js"></script>
+<script type="text/javascript" src="/vendor-common-0b0b0cc3031d3b0a1965.js"></script>
+<script type="text/javascript" src="/vendor-log-8df3dc520d958957bcbd.js"></script>
+<script type="text/javascript" src="/router-08fcd57cb4d630efd408.js"></script>
+</html>
+
