@@ -1,0 +1,36 @@
+# Service Definition
+version : "3.3"
+services:
+  wevserver:
+    image: ubuntu
+    ports:
+     - "80:80"
+    networks:
+     - webnet
+  redis:
+    image: redis
+    networks:
+     - webnet
+
+# Network Definition
+networks:
+  webnet:
+
+# Data Volume Definition
+volumes:
+  data-volume:
+
+# Container link
+links:
+  - logserver
+  - logserver:log01
+# port poen (host:conainer)
+ports:
+  - "3000"
+  - "8000:8000"
+  - "127.0.0.1:8000:8000"
+
+# exprose (container)
+expose:
+  - "3000"
+
